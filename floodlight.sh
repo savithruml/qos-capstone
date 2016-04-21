@@ -32,5 +32,5 @@ JVM_OPTS="$JVM_OPTS -Dpython.security.respectJavaAccessibility=false"
 </configuration>
 EOF_LOGBACK
 
-echo "Starting floodlight server ..."
+printf "\n\n******************************************************\n\nStarting Ralphie server...Go Buffs!\n\nAccess Ralphie at http://ralphie.com/ui/index.html\n\n******************************************************\n\n"
 java ${JVM_OPTS} -Dlogback.configurationFile=${FL_LOGBACK} -jar ${FL_JAR}
