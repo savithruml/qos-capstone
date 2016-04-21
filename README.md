@@ -3,7 +3,7 @@ Internet service providers and networking companies are apprehensive about imple
 
 Keywords — software-defined network, Quality of Service Floodlight, OpenFlow, Mininet, Open vSwitch, jitter
 
-### NETWORK TOPOLOGY<br />![Topology](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture1.JPG "hello")
+### NETWORK TOPOLOGY<br />![Topology](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture1.JPG "Topology")
 
 ### TOOLS USED
 
@@ -13,7 +13,7 @@ Keywords — software-defined network, Quality of Service Floodlight, OpenFlow, 
 * Cisco Catalyst Switch
 * Macintosh Machines as RTP/Data server & client
 
-### COST OF IMPLEMENTATION<br />![CapEx](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture.JPG)
+### COST OF IMPLEMENTATION<br />![CapEx](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture.JPG "CapEx")
 
 # INSTALLATION
 
@@ -40,6 +40,6 @@ Keywords — software-defined network, Quality of Service Floodlight, OpenFlow, 
 
 ## RESULTS
 
-### COMPARISON OF QoS PERFORMANCE CHARACTERISTICS<br />![QoS Performance Characteristics](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture2.JPG)
+### COMPARISON OF QoS PERFORMANCE CHARACTERISTICS<br />![QoS Performance Characteristics](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture2.JPG "Comparison")
 
-### SAMPLE OUTPUT<br />![sample output](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture3.JPG)
+### SAMPLE OUTPUT<br />![sample output](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture3.JPG "Output")
