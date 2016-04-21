@@ -32,7 +32,7 @@ Keywords — software-defined network, Quality of Service Floodlight, OpenFlow, 
 * Make the package<br /><br />`# cd qos-capstone`<br />`# sudo ./run.sh`<br /><br />
 * Verify the installation. Open a web-browser & enter the following,<br /><br />`http://ralphie.com/ui/index.html`<br /><br />
 ![Ralphie Controller](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture5.JPG "Ralphie Controller")<br />
-This confirms that the installation is complete
+<br />This confirms that the installation is complete.
 
 ## SWITCH NODE
 
