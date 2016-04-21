@@ -40,6 +40,6 @@ Keywords — software-defined network, Quality of Service Floodlight, OpenFlow, 
 * 
 ## RESULTS
 
-### COMPARISON OF QoS PERFORMANCE CHARACTERISTICS!<br />[QoS Performance Characteristics](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture2.JPG)
+### COMPARISON OF QoS PERFORMANCE CHARACTERISTICS!<br />![QoS Performance Characteristics](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture2.JPG)
 
-### SAMPLE OUTPUT<br />[sample output](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture3.JPG)
+### SAMPLE OUTPUT<br />![sample output](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture3.JPG)
