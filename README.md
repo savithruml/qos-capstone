@@ -11,7 +11,7 @@ Keywords — software-defined network, Quality of Service Floodlight, OpenFlow, 
 * Cisco Catalyst Switch
 * Macintosh Machines as RTP/Data server & client
 
-### NETWORK TOPOLOGY ![Topology](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture1.JPG)
+### NETWORK TOPOLOGY ![Topology]<br />(https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture1.JPG)
 
 #### Total Cost of Implementing the Project
 ![CapEx](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture.JPG)
