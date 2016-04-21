@@ -25,7 +25,7 @@ Keywords — software-defined network, Quality of Service Floodlight, OpenFlow, 
 * [Install](http://www.ubuntu.com/download/desktop/install-ubuntu-desktop) Ubuntu on a standard x86 hardware & run <br /><br />`# sudo apt-get update`<br /><br />
 * Assign a static IP on one of the interfaces
 
-#### _Floodlight OpenFlow Controller_
+#### _Custom OpenFlow Controller (Ralphie)_
 
 * Install the required packages for running the custom controller<br /><br />`# sudo apt-get install build-essential default-jdk ant python-dev`<br /><br /> 
 * Download the controller package by cloning it in the local environment<br /><br />`# git clone https://github.com/savithruml/qos-capstone`<br /><br />
