@@ -30,7 +30,9 @@ Keywords — software-defined network, Quality of Service Floodlight, OpenFlow, 
 * Install the required packages for running the custom controller<br /><br />`# sudo apt-get install build-essential default-jdk ant python-dev`<br /><br /> 
 * Download the controller package by cloning it in the local environment<br /><br />`# git clone https://github.com/savithruml/qos-capstone`<br /><br />
 * Make the package<br /><br />`# cd qos-capstone`<br />`# sudo ./run.sh`<br /><br />
-* Verify the installation. Open a web-browser & enter the following,<br /><br />`http://ralphie.com/ui/index.html`<br /><br />This confirms that the installation is complete
+* Verify the installation. Open a web-browser & enter the following,<br /><br />`http://ralphie.com/ui/index.html`<br /><br />
+![Ralphie Controller](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Captur4e.JPG)
+This confirms that the installation is complete
 
 ## SWITCH NODE
 
