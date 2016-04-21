@@ -3,8 +3,6 @@ Internet service providers and networking companies are apprehensive about imple
 
 Keywords — software-defined network, Quality of Service Floodlight, OpenFlow, Mininet, Open vSwitch, jitter
 
-![hello](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Screenshot%20from%202016-04-17%2014:24:38.png)
-
 ### TOOLS USED
 
 * Custom built OpenFlow Controller based on Floodlight
@@ -12,6 +10,8 @@ Keywords — software-defined network, Quality of Service Floodlight, OpenFlow, 
 * Raspberry Pi running Open vSwitch
 * Cisco Catalyst Switch
 * Macintosh Machines as RTP/Data server & client
+
+![Total CapEx to implement the Project](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture.JPG)
 
 # INSTALLATION
 
