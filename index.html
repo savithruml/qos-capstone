@@ -22,9 +22,13 @@
       <h1>
 <a id="abstract" class="anchor" href="#abstract" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ABSTRACT</h1>
 
-<p>Internet Service Providers (ISP) and networking companies are apprehensive about implementing a Software-Defined Network (SDN) as a universal solution because of the lack of quality research done in the field. This paper focuses on quality of service (QoS) as an influential factor differentiating a service provider’s perspective in choosing between a centralized SDN versus a distributed traditional routing network. An application prone to latency and jitter can severely impact its performance leading to a dismal customer experience. Most service providers today need a network with fast provisioning and quick support. SDN aims to provide this capability to the service provider with a valid exhibit of QoS. The proposed prototype of the SDN would demonstrate QoS and suggest ways to improve it. This paper aims to find ways to mitigate latency and suggests improvements in QoS in a SDN using the Floodlight OpenFlow controller. The networking tool iPerf is used to measure the QoS performance characteristics.</p>
+<p>Internet service providers and networking companies are apprehensive about implementing a software-defined network (SDN) as a universal solution, because of the lack of quality research done in the field. An application prone to latency and jitter can severely impact its performance leading to the dismal customer experience. Most service providers’ today need a network with fast provisioning and quick support. SDN aims to provide this capability to the service provider with a valid proposition of QoS. The proposed prototype of the SDN would demonstrate QoS and suggest ways to improve it. This document aims at finding ways to mitigate latency and suggest improvements in QoS in a SDN using the Floodlight OpenFlow controller. The performance testing to measure QoS would be done using the networking tool iPerf.</p>
 
-<p>Keywords — Software-Defined Network, Quality of Service, Floodlight, OpenFlow, Mininet, Open vSwitch, Jitter</p>
+<p>Keywords — software-defined network, Quality of Service Floodlight, OpenFlow, Mininet, Open vSwitch, jitter</p>
+
+<h3>
+<a id="network-topology" class="anchor" href="#network-topology" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>NETWORK TOPOLOGY<br><img src="https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture1.JPG" alt="Topology" title="Topology">
+</h3>
 
 <h3>
 <a id="tools-used" class="anchor" href="#tools-used" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TOOLS USED</h3>
@@ -37,7 +41,9 @@
 <li>Macintosh Machines as RTP/Data server &amp; client</li>
 </ul>
 
-<p><img src="https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture.JPG" alt="CapEx"></p>
+<h3>
+<a id="cost-of-implementation" class="anchor" href="#cost-of-implementation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>COST OF IMPLEMENTATION<br><img src="https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture.JPG" alt="CapEx" title="CapEx">
+</h3>
 
 <h1>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>INSTALLATION</h1>
@@ -84,6 +90,21 @@
 <li>Install dependencies on the Raspberry Pi by issuing the following commands,<br><br><code># sudo apt-get update</code><br><code># sudo apt-get -y upgrade</code><br><code># sudo apt-cache search linux-source</code><br><code># sudo apt-get install -y linux-source-3.18</code><br><code># sudo apt-get install -y python-simplejson automake autoconf gcc uml-utilities libtool build-essential git</code><br><code># sudo apt-get install pkg-config tcpdump iperf</code><br><code># sudo reboot</code><br><br><a href="http://openvswitch.org">Download &amp; Install</a> Open vSwitch<br><br><code># wget http://openvswitch.org/releases/openvswitch-2.3.1.tar.gz</code><br><code># tar zxvf openvswitch-2.3.1.tar.gz</code><br><code># cd openvswitch-2.3.1</code><br><code># sudo sh ./boot.sh</code><br><code># sudo  ./configure</code><br><code># sudo make</code><br><code># sudo rpi-update</code><br><code># sudo make install</code><br><code># sudo modprobe openvswitch</code><br><br>Run the script <a href="https://github.com/savithruml/capstone-team-5/blob/master/install-ovs.sh"><code>install-ovs.sh</code></a> to complete the installation<br><br><code># sudo ./install-ovs.sh</code><br>
 </li>
 </ul>
+
+<h2>
+<a id="results" class="anchor" href="#results" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RESULTS</h2>
+
+<h3>
+<a id="comparison-of-qos-performance-characteristics" class="anchor" href="#comparison-of-qos-performance-characteristics" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>COMPARISON OF QoS PERFORMANCE CHARACTERISTICS<br>
+</h3>
+
+<p>As depicted in the graph below, we achieved ideal latency figures when using a SDN model with Mininet. These low figures of latency are not practically achievable in a physical network because of the latency introduced through routing and switching overhead. The traditional network model using Cisco routers represented by the red line on the graph initially had a low latency figure of about 75ms when compared to the SDN model. When the RTP burst traffic was introduced, as seen at around 25-40 second mark, the SDN model outperforms the traditional model by about 2-3 ms. This difference is attributed to the OVS performance of looking up flows. As time passes, the traditional network offers a better QoS performance characteristics than a SDN model. This difference can be attributed to the performance limitations of the hardware that is being used (Raspberry Pi) to run the OVS daemon.<br><br><img src="https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture2.JPG" alt="QoS Performance Characteristics" title="Comparison"></p>
+
+<h3>
+<a id="sample-output" class="anchor" href="#sample-output" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SAMPLE OUTPUT<br>
+</h3>
+
+<p>Below are the screenshots of a video streaming on the client without and with QoS enabled in a SDN model. Figure 5.a depicts the distorted video output that is caused due to no prioritization of video traffic over data. After enabling the QoS module on our custom built controller, we were able to see a significant difference in the output of the video stream and this is seen in Figure 5.b.<br><br><img src="https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture3.JPG" alt="sample output" title="Output"></p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/savithruml/qos-capstone">QoS in a Software Defined Network</a> is maintained by <a href="https://github.com/savithruml">savithruml</a>.</span>
