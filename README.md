@@ -3,7 +3,7 @@ Internet service providers and networking companies are apprehensive about imple
 
 Keywords — software-defined network, Quality of Service Floodlight, OpenFlow, Mininet, Open vSwitch, jitter
 
-### NETWORK TOPOLOGY<br /><br /> ![Topology](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture1.JPG)
+### NETWORK TOPOLOGY<br />![Topology](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture1.JPG)
 
 ### TOOLS USED
 
