@@ -5,7 +5,8 @@ Keywords — software-defined network, Quality of Service Floodlight, OpenFlow, 
 
 ### TOOLS USED
 
-* Floodlight OpenFlow Controller on an Ubuntu Box
+* Custom built OpenFlow Controller based on Floodlight
+* Mininet Network Simulator
 * Raspberry Pi running Open vSwitch
 * Cisco Catalyst Switch
 * Macintosh Machines as RTP/Data server & client
@@ -22,9 +23,9 @@ Keywords — software-defined network, Quality of Service Floodlight, OpenFlow, 
 
 #### _Floodlight OpenFlow Controller_
 
-* Install the required packages for running Floodlight controller<br /><br />`# sudo apt-get install build-essential default-jdk ant python-dev`<br /><br /> 
-* Download the Floodlight controller by cloning it in the local environment<br /><br />`# git clone https://github.com/wallnerryan/floodlight-qos-beta.git`<br /><br />
-* Make the package<br /><br />`# cd floodlight-cos-beta`<br />`# ant; ./floodlight.sh`<br /><br />
+* Install the required packages for running the custom controller<br /><br />`# sudo apt-get install build-essential default-jdk ant python-dev`<br /><br /> 
+* Download the controller package by cloning it in the local environment<br /><br />`# git clone https://github.com/savithruml/qos-capstonet`<br /><br />
+* Make the package<br /><br />`# cd qos-capstone`<br />`# ant; ./floodlight.sh`<br /><br />
 * Verify the installation. Open a web-browser & enter the following,<br /><br />`http://localhost:8080/ui/index.html`<br /><br />This confirms that the installation is complete
 
 ## SWITCH NODE
