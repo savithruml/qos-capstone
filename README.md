@@ -48,7 +48,7 @@ Keywords — software-defined network, Quality of Service Floodlight, OpenFlow, 
 * Create a QoS policy for the traffic & assign the Class-Maps to it. The policy can be assigned based on various parameters such as source/destination address, protocol, Type of Service (ToS) bits, etc.<br /><br />`# ./addQoSPolicy.py -a -S 10.0.0.1 -D 10.0.0.2 -N Test-QoS-Capstone` / <br />
 `-J '{"eth-type":"0x0800","protocol":"17","queue":"2","tos":"101000"}'`<br /><br />This can be verified by entering,<br /><br />`# ./qosManager.py -L -t policy`<br />![QoS Policy](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture7.png)<br />
 
-* Measure the bandwidth between the stream server (10.0.0.1) & the client (10.0.0.2) using [iperf](https://iperf.fr) bandwidth measurement tool.<br />On Server (UDP)<br /><br />`# iperf -s -u`<br /><br />On Client (UDP)<br />`# iperf -c <server-ip-address> -u`<br /> 
+* Measure the bandwidth between the stream server (10.0.0.1) & the client (10.0.0.2) using [iperf](https://iperf.fr) bandwidth measurement tool.<br /><br />On Server (UDP)<br />`# iperf -s -u`<br /><br />On Client (UDP)<br />`# iperf -c <server-ip-address> -u`<br /> 
 
 # RESULTS
 
