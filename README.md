@@ -43,7 +43,7 @@ Keywords — software-defined network, Quality of Service Floodlight, OpenFlow, 
 ### TO CONFIGURE QOS
 
 `# ./addClassMap.py --add -t service -O '{"name":"Video","tos":"101000"}' -c 127.0.0.1 -p 8080`<br />`# ./qosManager.py -L -t services`<br />
-`# ./addQoSPolicy.py -a -S 10.0.0.1 -D 10.0.0.2 -N Test-QoS-Capstone` /
+`# ./addQoSPolicy.py -a -S 10.0.0.1 -D 10.0.0.2 -N Test-QoS-Capstone` / <br />
 `-J '{"eth-type":"0x0800","protocol":"17","queue":"2","tos":"101000"}'`<br />`# ./qosManager.py -L -t policy`<br />
 
 # RESULTS
