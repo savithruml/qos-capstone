@@ -43,10 +43,10 @@ Keywords — software-defined network, Quality of Service Floodlight, OpenFlow, 
 ### CONFIGURE QOS
 
 * Differentiate traffic through Class-Maps. In our example, we have **TWO** class of services (Video & Data)<br /><br /> 
-`# ./addClassMap.py --add -t service -O '{"name":"Video","tos":"101000"}' -c 127.0.0.1 -p 8080`<br /><br />This can be verfied by entering,<br />`# ./qosManager.py -L -t services`<br />![Class of Service](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture6.png)
+`# ./addClassMap.py --add -t service -O '{"name":"Video","tos":"101000"}' -c 127.0.0.1 -p 8080`<br /><br />This can be verfied by entering,<br /><br />`# ./qosManager.py -L -t services`<br />![Class of Service](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture6.png)
 
 * Create a QoS policy for the traffic & assign the Class-Maps to it. The policy can be assigned based on various parameters such as source/destination address, protocol, Type of Service (ToS) bits, etc.<br /><br />`# ./addQoSPolicy.py -a -S 10.0.0.1 -D 10.0.0.2 -N Test-QoS-Capstone` / <br />
-`-J '{"eth-type":"0x0800","protocol":"17","queue":"2","tos":"101000"}'`<br />`# ./qosManager.py -L -t policy`<br />
+`-J '{"eth-type":"0x0800","protocol":"17","queue":"2","tos":"101000"}'`<br /><br />This can be verified by entering,<br /><br />`# ./qosManager.py -L -t policy`![QoS Policy](https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture7.png)<br />
 
 # RESULTS
 
