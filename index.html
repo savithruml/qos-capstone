@@ -98,7 +98,7 @@
 
 <ul>
 <li><p>Differentiate traffic through Class-Maps. In our example, we have <strong>TWO</strong> class of services (Video &amp; Data)<br><br> 
-<code># ./addClassMap.py --add -t service -O '{"name":"Video","tos":"101000"}' -c 127.0.0.1 -p 8080</code><br><br>This can be verfied by entering,<br><br><code># ./qosManager.py -L -t services</code><br><img src="https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture6.png" alt="Class of Service"></p></li>
+<code># ./addClassMap.py --add -t service -O '{"name":"Video","tos":"101000"}' -c 127.0.0.1 -p 8080</code><br><br>This can be verfied by entering,<br><br><code># ./qosManager.py -L -t services</code><br><img src="https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture6.PNG" alt="Class of Service"></p></li>
 <li><p>Create a QoS policy for the traffic &amp; assign the Class-Maps to it. The policy can be assigned based on various parameters such as source/destination address, protocol, Type of Service (ToS) bits, etc.<br><br><code># ./addQoSPolicy.py -a -S 10.0.0.1 -D 10.0.0.2 -N Test-QoS-Capstone</code> / <br>
 <code>-J '{"eth-type":"0x0800","protocol":"17","queue":"2","tos":"101000"}'</code><br><br>This can be verified by entering,<br><br><code># ./qosManager.py -L -t policy</code><br><img src="https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture7.png" alt="QoS Policy"><br></p></li>
 <li><p>Measure the bandwidth between the stream server (10.0.0.1) &amp; the client (10.0.0.2) using <a href="https://iperf.fr">iperf</a> bandwidth measurement tool.<br><br>On Server (UDP)<br><code># iperf -s -u</code><br><br>On Client (UDP)<br><code># iperf -c &lt;server-ip-address&gt; -u</code><br> </p></li>
