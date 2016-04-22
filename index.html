@@ -66,16 +66,18 @@
 </ul>
 
 <h4>
-<a id="floodlight-openflow-controller" class="anchor" href="#floodlight-openflow-controller" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><em>Floodlight OpenFlow Controller</em>
+<a id="custom-openflow-controller-ralphie" class="anchor" href="#custom-openflow-controller-ralphie" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><em>Custom OpenFlow Controller (Ralphie)</em>
 </h4>
 
 <ul>
 <li>Install the required packages for running the custom controller<br><br><code># sudo apt-get install build-essential default-jdk ant python-dev</code><br><br> </li>
-<li>Download the controller package by cloning it in the local environment<br><br><code># git clone https://github.com/savithruml/qos-capstonet</code><br><br>
+<li>Download the controller package by cloning it in the local environment<br><br><code># git clone https://github.com/savithruml/qos-capstone</code><br><br>
 </li>
-<li>Make the package<br><br><code># cd qos-capstone</code><br><code># ant; ./floodlight.sh</code><br><br>
+<li>Make the package<br><br><code># cd qos-capstone</code><br><code># sudo ./run.sh</code><br><br>
 </li>
-<li>Verify the installation. Open a web-browser &amp; enter the following,<br><br><code>http://localhost:8080/ui/index.html</code><br><br>This confirms that the installation is complete</li>
+<li>Verify the installation. Open a web-browser &amp; enter the following,<br><br><code>http://ralphie.com/ui/index.html</code><br><br>
+<img src="https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture5.JPG" alt="Ralphie Controller" title="Ralphie Controller"><br>
+<br>This confirms that the installation is complete.</li>
 </ul>
 
 <h2>
@@ -91,8 +93,19 @@
 </li>
 </ul>
 
-<h2>
-<a id="results" class="anchor" href="#results" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RESULTS</h2>
+<h3>
+<a id="configure-qos" class="anchor" href="#configure-qos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CONFIGURE QOS</h3>
+
+<ul>
+<li><p>Differentiate traffic through Class-Maps. In our example, we have <strong>TWO</strong> class of services (Video &amp; Data)<br><br> 
+<code># ./addClassMap.py --add -t service -O '{"name":"Video","tos":"101000"}' -c 127.0.0.1 -p 8080</code><br><br>This can be verfied by entering,<br><br><code># ./qosManager.py -L -t services</code><br><img src="https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture6.png" alt="Class of Service"></p></li>
+<li><p>Create a QoS policy for the traffic &amp; assign the Class-Maps to it. The policy can be assigned based on various parameters such as source/destination address, protocol, Type of Service (ToS) bits, etc.<br><br><code># ./addQoSPolicy.py -a -S 10.0.0.1 -D 10.0.0.2 -N Test-QoS-Capstone</code> / <br>
+<code>-J '{"eth-type":"0x0800","protocol":"17","queue":"2","tos":"101000"}'</code><br><br>This can be verified by entering,<br><br><code># ./qosManager.py -L -t policy</code><br><img src="https://github.com/savithruml/qos-capstone/blob/master/screenshots/Capture7.png" alt="QoS Policy"><br></p></li>
+<li><p>Measure the bandwidth between the stream server (10.0.0.1) &amp; the client (10.0.0.2) using <a href="https://iperf.fr">iperf</a> bandwidth measurement tool.<br><br>On Server (UDP)<br><code># iperf -s -u</code><br><br>On Client (UDP)<br><code># iperf -c &lt;server-ip-address&gt; -u</code><br> </p></li>
+</ul>
+
+<h1>
+<a id="results" class="anchor" href="#results" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RESULTS</h1>
 
 <h3>
 <a id="comparison-of-qos-performance-characteristics" class="anchor" href="#comparison-of-qos-performance-characteristics" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>COMPARISON OF QoS PERFORMANCE CHARACTERISTICS<br>
