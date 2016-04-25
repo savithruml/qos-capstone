@@ -1,0 +1,2 @@
+{"outPort": 2, "datetime": "Mon Apr 25 10:53:05 2016", "name": "test02", "inPort": 1, "Dpid": "00:00:00:00:00:00:00:01"}
+{"outPort": 1, "datetime": "Mon Apr 25 10:53:05 2016", "name": "test02", "inPort": 2, "Dpid": "00:00:00:00:00:00:00:02"}
